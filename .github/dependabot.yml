@@ -9,9 +9,15 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
+    commit-message:
+      prefix: "#14"
+      include: "scope"
 
   - package-ecosystem: "npm"
     directory: "/"
     schedule:
       interval: "weekly"
+    commit-message:
+      prefix: "#14"
+      include: "scope"
     open-pull-requests-limit: 3
