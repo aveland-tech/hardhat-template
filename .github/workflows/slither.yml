@@ -10,9 +10,11 @@ jobs:
   analyze:
     runs-on: ubuntu-latest
     permissions:
-      contents: read
+      # required for all workflows
       security-events: write
-      pull-requests: write
+      # only required for workflows in private repositories
+      actions: read
+      contents: read
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
@@ -39,6 +41,6 @@ jobs:
         sarif: results.sarif
 
     - name: Upload SARIF file
-      uses: github/codeql-action/upload-sarif@v1
+      uses: github/codeql-action/upload-sarif@v2
       with:
         sarif_file: ${{ steps.slither.outputs.sarif }}
