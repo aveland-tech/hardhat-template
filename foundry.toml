@@ -1,4 +1,4 @@
-[default]
+[profile.default]
 solc-version = "0.8.12"
 #auto_detect_solc = false
 cache = true
@@ -11,11 +11,7 @@ optimizer = true
 optimizer_runs = 490
 out = 'artifacts_forge'
 remappings = [
-  #' @chainlink=node_modules/@chainlink/contracts/src/',
-  '@chainlink/contracts/src=node_modules/@chainlink/contracts/src/',
-  '@ds-test=lib/ds-test/src/',
   '@openzeppelin=node_modules/@openzeppelin/',
-  '@std=lib/forge-std/src/',
   'contracts/=contracts/'
 ]
 src = 'contracts'
