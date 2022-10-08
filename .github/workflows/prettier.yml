@@ -1,0 +1,22 @@
+name: Prettier Formatting
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          submodules: recursive
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v2.4.1
+      - name: Run yarn install
+        run: yarn install
+      - name: Run prettier:contracts
+        run: yarn prettier:contracts

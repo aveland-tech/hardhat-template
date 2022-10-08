@@ -1,5 +1,13 @@
-node_modules
-artifacts
-cache
-coverage*
+# folders
+artifacts/
+artifacts_forge/
+build/
+cache/
+coverage/
+dist/
+node_modules/
+typechain/
+
+# files
+coverage.json
 gasReporterOutput.json
