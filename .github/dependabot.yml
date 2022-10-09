@@ -10,7 +10,7 @@ updates:
     schedule:
       interval: "weekly"
     commit-message:
-      prefix: "#14"
+      prefix: "#18 "
       include: "scope"
 
   - package-ecosystem: "npm"
