@@ -11,6 +11,8 @@ optimizer = true
 optimizer_runs = 490
 out = 'artifacts_forge'
 remappings = [
+  '@ds-test=lib/ds-test/src/',
+  '@std=lib/forge-std/src/',
   '@openzeppelin=node_modules/@openzeppelin/',
   'contracts/=contracts/'
 ]
